@@ -6,7 +6,7 @@
     <title>Formularze</title>
   </head>
   <body>
-    <table class="books">
+    <table border="1" class="books" >
       <thead>
         <tr>
           <th class="row-1">Tytuł</th>
@@ -15,16 +15,19 @@
           <th class="row-4">Kategoria</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody id="tbody" class="tbody">
+          <!-- LIBRARY -->
+      </tbody>
     </table>
     <div class="container">
-      <form class="form">
+      <form class="form" id="form" >
         <label for="tytul">
           <input
             type="text"
             id="tytul"
             placeholder="Tytuł książki"
             minlength="1"
+            required
           />
         </label>
 
@@ -34,6 +37,7 @@
             id="autor"
             placeholder="Autor książki"
             minlength="3"
+            required
           />
         </label>
 
@@ -44,47 +48,23 @@
             placeholder="Priorytet"
             min="1"
             max="5"
+            required
           />
         </label>
 
         <label for="kategoria">
-          <select id="kategoria">
+          <select id="kategoria" required>
             <option value="" selected>Wybierz opcję</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="sci-fi">Sci-fi</option>
-            <option value="horror">Horror</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-fi">Sci-fi</option>
+            <option value="Horror">Horror</option>
           </select>
         </label>
 
-        <button id="btn">Dodaj film</button>
+        <input type="submit" value="Dodaj książkę" class="btn">
+
       </form>
-      <script>
-        const books = [];
-
-        let addBook = (ev) => {
-          ev.preventDefault();
-          let book = {
-            tytul: document.getElementById('tytul').value,
-            autor: document.getElementById('autor').value,
-            priorytet: document.getElementById('priorytet').value,
-          };
-          books.push(book);
-          document.forms[0].reset();
-
-          console.log("Added " + { books });
-
-          /* Saving to local storage */
-          localStorage.setItem("MyBookList", JSON.stringify(books));
-        };
-
-        document.addEventListener("DCOMContentLoaded", () => {
-          document.getElementById("btn").addEventListener("click", addBook);
-        });
-
-        function clearForm() {
-          document.getElementById("form1").reset();
-        }
-      </script>
+      <script src="app.js"></script>
     </div>
   </body>
 </html>

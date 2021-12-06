@@ -11,6 +11,10 @@
 }
 
 /* Table */
+
+.tbody {
+    text-align: center;
+}
 .books {
     table-layout: fixed;
     width: 100%;
@@ -49,13 +53,13 @@ input {
 }
 
 /* Buttons */
-#btn {
+.btn {
     transition: 200ms;
     padding: 0px 8px 0px 8px;
     align-self: center;
     margin-top: 12px;
 }
 
-#btn:hover {
+.btn:hover {
     transform: scale(1.2);
 }
