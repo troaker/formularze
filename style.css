@@ -1,65 +1,204 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.container {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+}
+
+.nav {
+  font-weight: bold;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 25px;
+}
+
+.separator {
+  height: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: darkgray;
+}
+
+/* Container */
+.library {
+  width: 100%;
+  display: flex;
+}
+
+.table-container {
+  width: 50%;
+}
+
+.rightSide {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.bookForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Table */
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
 
 .tbody {
-    text-align: center;
+  text-align: center;
 }
 .books {
-    table-layout: fixed;
-    width: 100%;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .books th {
-    color: white;
-    background-color: gray;
+  color: white;
+  background-color: gray;
 }
 
 .row-1 {
-    width: 25%;
+  width: 30%;
 }
 .row-2 {
-    width: 35%;
+  width: 25%;
 }
 .row-3 {
-    width: 15%;
+  width: 25%;
 }
 .row-4 {
-    width: 25%;
+  width: 25%;
 }
 
 /* Form */
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 150px;
 }
 
 input {
-    width: 145px;
-    margin-top: 8px;
+  width: 145px;
+  margin-top: 8px;
 }
 
 /* Buttons */
 .btn {
-    transition: 200ms;
-    padding: 0px 8px 0px 8px;
-    align-self: center;
-    margin-top: 12px;
+  transition: 200ms;
+  padding: 0px 8px 0px 8px;
+  margin-top: 12px;
+  align-self: center;
+  background-color: #DFF6FF;
+  border-color: black;
 }
 
 .btn:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
+  cursor: pointer;
 }
+
+/* Slideshow container */
+.slideshow {
+ max-width: 200px;
+ min-height: 315px;  
+ position: relative;
+ margin: auto;
+}
+  
+  /* Slides */
+.slides {
+  display: none;
+}
+
+.slides img {
+  height: 315px;
+  width: 100%;
+}
+
+#slide1 {
+  display: block;
+}
+  
+  /* Next & previous buttons */
+.prev, .next {
+  transition: 0.6s ease;
+  width: auto;
+  top: 50%;
+  position: absolute;
+  padding: 16px;
+  margin-top: -22px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.35);
+}
+
+.prev:focus, .next:focus {
+  background-color: rgba(0,0,0,0);
+}
+
+  /* Dots */
+.dots-containter {
+    text-align: center;
+}
+
+.dot {
+  transition: background-color 0.6s ease;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+}
+  
+.active, .dot:hover {
+  background-color: darkgray;
+}
+
+
+
+  

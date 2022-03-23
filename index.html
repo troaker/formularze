@@ -3,24 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Formularze</title>
+    <title>Biblioteka</title>
   </head>
   <body>
-    <table border="1" class="books" >
-      <thead>
-        <tr>
-          <th class="row-1">Tytuł</th>
-          <th class="row-2">Autor</th>
-          <th class="row-3">Priorytet</th>
-          <th class="row-4">Kategoria</th>
-        </tr>
-      </thead>
-      <tbody id="tbody" class="tbody">
-          <!-- LIBRARY -->
-      </tbody>
-    </table>
-    <div class="container">
+
+    <div class="nav">
+      <ul>
+        <li>Witaj (php tutaj)</li>
+        <li id="clock" onload="currentTime()"></li>
+      </ul>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="library">
+
+      <div class="table-container">
+
+        <table class="books" >
+
+          <thead>
+            <tr>
+              <th class="row-1">Tytuł</th>
+              <th class="row-2">Autor</th>
+              <th class="row-3">Priorytet</th>
+              <th class="row-4">Kategoria</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody" class="tbody">
+              <!-- LIBRARY -->
+          </tbody>
+
+        </table>
+
+      </div>
+
+      <div class="rightSide">
+
+        <div class="slideshow-container">  
+
+          <div class="slideshow">
+  
+            <div class="slides" id="slide1">
+              <a href="/images/Hobbit.jpg"><img src="/images/Hobbit.jpg" alt="Okładka Hobbita"></a> 
+            </div>
+  
+            <div class="slides">
+              <a href="images/Lotr1.jpg"><img src="/images/Lotr1.jpg" alt="Okładka Władcy Pierścieni: Drużyna Pierścienia"></a>
+            </div>
+  
+            <div class="slides">
+              <a href="images/Lotr2.jpg"><img src="/images/Lotr2.jpg" alt="Okładka Władcy Pierścieni: Dwie Wieże"></a>
+            </div>
+            <div class="slides">
+              <a href="/images/Lotr3.jpg"><img src="/images/Lotr3.jpg" alt="Okładka Władcy Pierścieni: Powrót Króla"></a> 
+            </div>
+  
+            <div class="slides">
+              <a href="images/Metro2033.jpg"><img src="/images/Metro2033.jpg" alt="Okładka Metro 2033"></a>
+            </div>
+  
+            <div class="slides">
+              <a href="images/Metro2034.jpg"><img src="/images/Metro2034.jpg" alt="Okładka Metro 2034"></a>
+            </div>
+            <div class="slides">
+              <a href="images/Wiedzmin.jpg"><img src="/images/Wiedzmin.jpg" alt="Okładka Wiedźmina"></a>
+            </div>
+  
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#171;</a>
+            <a class="next" onclick="plusSlides(1)">&#187;</a>
+          </div>
+  
+          <div class="dots-containter">
+  
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+  
+          </div>
+  
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="bookForm">
+
       <form class="form" id="form" >
+
         <label for="tytul">
           <input
             type="text"
@@ -52,6 +131,8 @@
           />
         </label>
 
+        <br>
+
         <label for="kategoria">
           <select id="kategoria" required>
             <option value="" selected>Wybierz opcję</option>
@@ -64,7 +145,12 @@
         <input type="submit" value="Dodaj książkę" class="btn">
 
       </form>
+
       <script src="app.js"></script>
+
     </div>
+
+
+
   </body>
 </html>
