@@ -21,6 +21,11 @@ ul {
   margin: 25px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .separator {
   height: 3px;
   margin-top: 5px;
@@ -35,11 +40,11 @@ ul {
 }
 
 .table-container {
-  width: 50%;
+  width: 100%;
 }
 
 .rightSide {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
 }
